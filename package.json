@@ -1,25 +1,31 @@
 {
   "name": "grunt-build-info",
   "description": "Import build info from CI systems",
-  "version": "0.1.0",
-  "homepage": "https://github.com/r3b/grunt-build-info",
+  "version": "0.2.0",
+  "homepage": "https://github.com/blech75/grunt-build-info",
   "main": "tasks/build_info.js",
   "author": {
     "name": "ryan bridges",
     "email": "ryan@fasterness.com",
     "url": "www.fasterness.com"
   },
+  "contributors": [
+    {
+      "name": "justin blecher",
+      "email": "justin@worksperfectly.net"
+    }
+  ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/r3b/grunt-build-info.git"
+    "url": "git://github.com/blech75/grunt-build-info.git"
   },
   "bugs": {
-    "url": "https://github.com/r3b/grunt-build-info/issues"
+    "url": "https://github.com/blech75/grunt-build-info/issues"
   },
   "licenses": [
     {
       "type": "APLv2",
-      "url": "https://github.com/r3b/grunt-build-info/blob/master/LICENSE-APLv2"
+      "url": "https://github.com/blech75/grunt-build-info/blob/master/LICENSE"
     }
   ],
   "engines": {
