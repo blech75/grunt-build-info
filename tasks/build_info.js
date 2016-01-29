@@ -7,8 +7,9 @@
  */
 
 'use strict';
+
 var getConfiguration = require("../lib/services");
-var merge = require('merge');
+
 function registerTasks(grunt) {
 
   // Please see the Grunt documentation for more information regarding task
@@ -17,27 +18,19 @@ function registerTasks(grunt) {
     // grunt.config.set("BUILD_INFO", val);
     console.log("VAL", val);
 
-    global["BUILD_INFO"]=val;
+    global["BUILD_INFO"] = val;
   });
-  grunt.registerMultiTask('build_info', 'Import build info from CI systems', function() {
-    // Merge task-specific and/or target-specific options with these defaults.
-    var options = this.options({
-      service : 'unknown',
-      buildId :  'unknown',
-      commitId : 'unknown',
-      build : 'unknown',
-      branch : 'unknown'
-    });
 
-    global["BUILD_INFO"]=merge(options, getConfiguration());
+  grunt.registerMultiTask('build_info', 'Import build info from CI systems', function() {
+    global["BUILD_INFO"] = getConfiguration();
   });
 
 }
 
 module.exports = function(grunt){
-  if(grunt){
+  if (grunt) {
     registerTasks(grunt);
-  }else{
+  } else {
     return getConfiguration();
   }
 };
